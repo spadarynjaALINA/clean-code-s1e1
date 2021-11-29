@@ -5,30 +5,30 @@ body {
   font-family: Lato, sans-serif;
 }
 
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.aaa img {
+.header__img {
   width: 100%;
 }
 
-.aaa .more-inf {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .aaa { 
+  .header { 
     text-align: center;
   }
 
 }
 
-.centered-main-page-element {
+.main {
   display: block;
   width: 500px;
   margin: 0 auto 0;
@@ -40,7 +40,7 @@ body {
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.add-section__wrap {
   display: flex;
 }
 
@@ -76,7 +76,7 @@ button:hover {
 /* Heading */
 
 h3,
-label[for="new-task"] {
+label[for='new-task'] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -86,7 +86,7 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+input[type="text"]{
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -97,6 +97,7 @@ input[type="text"] {
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  width: 226px;
 }
 
 input[type="text"]:focus {
@@ -105,12 +106,12 @@ input[type="text"]:focus {
 
 /* New Task */
 
-label[for="new-task"] {
+label[for='new-task'] {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+input#add-section {
   width: 318px;
 }
 
@@ -125,53 +126,49 @@ li {
   align-items: center;
 }
 
-li > * {
+li > *{
   vertical-align: middle;
 }
 
-li > input[type="checkbox"] {
+li > input[type="checkbox"]  {
   margin: 0 10px;
 }
 
-li > label {
+li >    input[type="text"] {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li >    input[type="text"] {
-  width: 226px;
-}
-
-button.delete img {
+button.list-item__delete-btn img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+button.list-item__delete-btn img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
 
-ul#completed-tasks label {
+ul#completed-list label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-ul li input[type="text"] {
+ul li input[type=text] {
   display: none;
 }
 
-ul li.edit-mode input[type="text"] {
+ul li.item-edit input[type=text] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.edit-mode label {
+ul li.item-edit label {
   display: none;
 }
